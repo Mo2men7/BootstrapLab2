@@ -392,8 +392,12 @@
       let links = document.querySelector(".navbar-collapse");
       let toggler = document.querySelector(".navbar-toggler");
       toggler.addEventListener("click", function () {
-        links.classList =
-          "navbar-collapse mt-5 position-absolute top-0 end-0 bg-dark collapse show full-height";
+        setTimeout(() => {
+          if (links.classList.contains("show")) {
+            links.classList =
+              "navbar-collapse mt-5 position-absolute top-0 end-0 bg-dark collapse show full-height";
+          }
+        }, 380);
       });
     </script>
   </body>
