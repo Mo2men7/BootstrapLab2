@@ -16,10 +16,14 @@
     * {
       font-family: "Poppins", sans-serif;
     }
+    .full-height {
+      height: 100vh;
+      padding: 5px 20px;
+    }
   </style>
-  <body data-spy="scroll" data-target="#navbar">
+  <body data-spy="scroll" data-target=".navbar">
     <!-- navbar start -->
-    <nav id="navbar" class="navbar navbar-expand-lg bg-dark px-4 sticky-top">
+    <nav class="navbar navbar-expand-lg bg-dark px-4 sticky-top">
       <div class="container-fluid">
         <a class="navbar-brand text-light fw-bold fs-4" href="#"
           >BR<span class="text-primary">A</span>ND</a
@@ -383,5 +387,13 @@
       <!-- Footer -->
       <!-- footer end -->
     </main>
+    <script>
+      let links = document.querySelector(".navbar-collapse");
+      let toggler = document.querySelector(".navbar-toggler");
+      toggler.addEventListener("click", function () {
+        links.classList =
+          "navbar-collapse mt-5 position-absolute top-0 end-0 bg-dark collapse show full-height";
+      });
+    </script>
   </body>
 </html>
